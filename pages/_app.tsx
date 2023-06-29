@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app'
-import "../public/css/styles.css";
+import "../public/css/styles.scss";
+import Image from "next/image";
+
 import React from "react";
 import { DefaultProviders } from "../src/providers/defaultProviders";
 
