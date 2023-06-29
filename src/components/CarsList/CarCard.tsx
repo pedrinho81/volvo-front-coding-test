@@ -6,7 +6,8 @@ import { ChevronCircled } from "../../../docs/ChevronCircledIcon";
 import { ChevronSmall } from "../../../docs/chevron-small";
 import Link from "next/link";
 import { useNavigateByTab } from "../../utils/navigateByTab";
-export function CarCard({ bodyType, id, imageUrl, modelName, modelType }: Car) {
+import { Card } from "../../types/card";
+export function CarCard({ bodyType, id, imageUrl, modelName, modelType, noCta }: Card) {
   const {handleNavigateByTab} = useNavigateByTab()
   return (
     <div tabIndex={1} className="card">
@@ -24,7 +25,8 @@ export function CarCard({ bodyType, id, imageUrl, modelName, modelType }: Car) {
         </Flex>
       </div>
       <Image src={imageUrl} alt="" width={800} height={600} />
-      <div className="cta">
+      { !noCta && (
+        <div className="cta">
         <Link href={`/learn/${id}`}>
           <Text
             tabIndex={2}
@@ -42,6 +44,8 @@ export function CarCard({ bodyType, id, imageUrl, modelName, modelType }: Car) {
           </Text>
         </Link>
       </div>
+      )}
+      
     </div>
   );
 }
