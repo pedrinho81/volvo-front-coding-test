@@ -25,8 +25,8 @@ export function SliderCars({ filteredCar }: SliderProps) {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
-      partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
+      items: 1.2,
+      partialVisibilityGutter: 40 , // this is needed to tell the amount of px that should be visible.
     },
   };
 

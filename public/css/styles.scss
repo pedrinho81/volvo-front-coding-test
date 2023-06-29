@@ -111,10 +111,9 @@ body {
     transform: rotate(180deg);
 }
 .react-multi-carousel-item{
-  max-width: 280px;
-    min-width: 280px;
-  @media(min-width: 768px) {
-    
+  max-width: 400px;
+  min-width: 280px;
+  @media(min-width: 768px) { 
     max-width: 360px;
     min-width: 320px;
   }
@@ -143,3 +142,7 @@ body {
   @extend .btn;
   margin-right: auto;
 }
+//TODO: MELHORAR RESPONSIVIDADE MOBILE E TABLET (ÚLTIMO ITEM)
+//TODO: ADICIONAR EFEITO HOVER NO .BTN
+//TODO: ADICIONAR FILTER BY BODYTYPE
+//TODO: ADICIONAR TESTES 
