@@ -2,6 +2,7 @@ body {
   padding: 0 1rem;
   background: white;
   color: black;
+  min-height: 80vh;
 }
 
 .logo {
@@ -11,8 +12,15 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 240px;
   margin-right: 50px;
+  div:first-of-type{
+    flex-direction: column;
+    margin-bottom: 0.4rem;
+  }
+  em {
+    font-size: 0.875rem  !important;
+  }
   > p {
    color: #808c98 ;
   }
@@ -20,20 +28,46 @@ body {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     p {
       cursor: pointer;
+      color: #2D67B2;
+      font-size: 0.9rem;
       display: flex;
       align-items: center;
       gap: 5px;
       font-weight: 500;
       text-transform: uppercase;
+      svg {
+        width: 11px;
+        margin-top: 1.2px;
+      }
+    }
+  }
+  @media(min-width: 768px) {
+    width: 320px;
+    div:first-of-type {
+      flex-direction: row;
+    }
+    em {
+      font-size: 1rem !important;
+    }
+    .cta {
+      margin-top: 1.5rem;
+      p {
+        svg {
+          width: 15px;
+        }
+      }
     }
   }
 }
 
+.carousel-container {
+  min-height: 350px
+}
 .carousel-button-group {
-  display: flex;
+  display: none;
   position: absolute;
   align-items: center;
   margin-top: 2rem;
@@ -50,13 +84,36 @@ body {
   .disable {
     opacity: .7;
   }
+  @media(min-width: 768px) {
+    display: flex;
+  }
   
 }
 
 .react-multi-carousel-item{
-
-  max-width: 360px;
-  min-width: 320px;
+  max-width: 280px;
+    min-width: 280px;
+  @media(min-width: 768px) {
+    
+    max-width: 360px;
+    min-width: 320px;
+  }
 }
 
-
+.custom-dot-list-style {
+  button {
+    cursor: pointer;
+    margin-right: 7px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: #ccc;
+  } 
+  .active {
+    background: black;
+  }
+  @media(min-width: 768px) {
+    display: none !important;
+  }
+}

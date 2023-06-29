@@ -1,6 +1,6 @@
 import { Spinner } from "vcc-ui";
 import { useCars } from "../../hooks/useCars";
-import { SliderCars } from "./SliderCars";
+import { SliderCars } from "../Slider/SliderCars";
 export function CarsList() {
   const { data, isLoading } = useCars();
   return (

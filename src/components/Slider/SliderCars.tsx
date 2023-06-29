@@ -1,11 +1,12 @@
 import { useRef } from "react";
 import { Car } from "../../types/car";
-import { CarCard } from "./CarCard";
+import { CarCard } from "../CarsList/CarCard";
 import { Text } from "vcc-ui";
 import {ButtonGroup} from './ButtonGroup'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { ChevronCircled } from "../../../docs/ChevronCircledIcon";
+import { CustomDot } from "./Dots";
 
 interface SliderProps {
   filteredCar: Car[];
@@ -14,12 +15,12 @@ interface SliderProps {
 export function SliderCars({ filteredCar }: SliderProps) {
   const responsive = {
     Desktop: {
-      breakpoint: { max: 3000, min: 1320 },
+      breakpoint: { max: 3000, min: 1420 },
       items: 4,
       
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1424, min: 464 },
       items: 2,
     },
     mobile: {
@@ -45,7 +46,10 @@ export function SliderCars({ filteredCar }: SliderProps) {
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
       renderButtonGroupOutside={true} 
+      showDots
       customButtonGroup={<ButtonGroup />}
+      
+      customDot={<CustomDot />}
       >
     
       {filteredCar.map((car) => (
