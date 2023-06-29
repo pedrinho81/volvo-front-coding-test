@@ -3,17 +3,33 @@ body {
   background: white;
   color: black;
   min-height: 80vh;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+  }
 }
+.center {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title-page {
 
-.logo {
-  width: 200px;
-  height: 200px;
+  text-align: center;
+  font-size: 2.5rem !important;
+  font-weight: bold;
+  svg {
+    margin-top: -2px;
+  }
+
 }
 .card {
   display: flex;
   flex-direction: column;
   width: 240px;
-  margin-right: 50px;
+ 
   div:first-of-type{
     flex-direction: column;
     margin-bottom: 0.4rem;
@@ -72,15 +88,7 @@ body {
   align-items: center;
   margin-top: 2rem;
   right: 100px;
-  > button {
-    width: 40px;
-    height: 33.3px;
-    background: none;
-    border: none;
-  }
-  .inverted {
-      transform: rotate(180deg);
-  }
+
   .disable {
     opacity: .7;
   }
@@ -89,7 +97,19 @@ body {
   }
   
 }
-
+.btn {
+  width: 40px;
+  height: 33.3px;
+  background: none;
+  border: none;
+  :hover {
+    transform: translate(1.3);
+    transition: ease-in-out 0.5;
+  }
+}
+.inverted {
+    transform: rotate(180deg);
+}
 .react-multi-carousel-item{
   max-width: 280px;
     min-width: 280px;
@@ -116,4 +136,10 @@ body {
   @media(min-width: 768px) {
     display: none !important;
   }
+}
+
+.back-btn {
+  @extend .inverted;
+  @extend .btn;
+  margin-right: auto;
 }

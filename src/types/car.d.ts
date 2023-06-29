@@ -15,3 +15,4 @@ export interface Car {
   modelType: ModelType;
   imageUrl: string;
 }
+
