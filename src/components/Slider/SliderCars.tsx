@@ -4,20 +4,21 @@ import {ButtonGroup} from './ButtonGroup'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { CustomDot } from "./Dots";
-
+import { useCars } from "../../hooks/useCars";
 interface SliderProps {
   filteredCar: Car[];
 }
 
 export function SliderCars({ filteredCar }: SliderProps) {
+  const {data} = useCars()
   const responsive = {
     lgDesktop: {
       breakpoint: { max: 3000, min: 1400},
-      items: 4,
+      items: filteredCar.length < 4 ? filteredCar.length : 4,
     },
     mdDesktop: {
       breakpoint: { max: 1400, min: 1000 },
-      items: 3,
+      items: filteredCar.length < 4 ? filteredCar.length : 4,
     },
     smDesktop: {
       breakpoint: { max: 1000, min: 768 },
@@ -33,7 +34,7 @@ export function SliderCars({ filteredCar }: SliderProps) {
 
     }
   };
-
+  console.log(responsive)
   return (
     <>
     <Carousel

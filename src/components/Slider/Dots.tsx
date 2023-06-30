@@ -8,7 +8,7 @@ export const CustomDot = ({ onClick = () => {}, ...rest }) => {
     carouselState: { currentSlide, deviceType },
     data,
   } = rest;
-  const carouselItems = ['', '', ''];
+  const carouselItems = [''];
   // onMove means if dragging or swiping in progress.
   // active is provided by this lib for checking if the item is active or not.
   return (
