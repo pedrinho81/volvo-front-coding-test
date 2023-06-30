@@ -11,8 +11,8 @@ export function BackBtn({ navigate }: BackBtnProps) {
     router.push(navigate);
   };
   return (
-    <button className="back-btn" tabIndex={1} onClick={handleNavigate}>
+    <div role="button" className="back-btn" tabIndex={1} onClick={handleNavigate}>
       <ChevronCircled />
-    </button>
+    </div>
   );
 }
