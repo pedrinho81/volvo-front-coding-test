@@ -13,7 +13,6 @@ export const ButtonGroup = ({
   const isDisabledPrevButton = currentSlide === 0 || totalItems === 2;
   const isDisabledNextButton = totalItems === 2 || currentSlide === totalItems - slidesToShow;
     
-console.log(rest.carouselState)
   return (
     <div className="carousel-button-group">
       <button

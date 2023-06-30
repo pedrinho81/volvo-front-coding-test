@@ -10,9 +10,7 @@ export default function HomePage() {
   const router = useRouter();
 
   const id = router.query.id as unknown as string;
-  console.log(id);
   const { data, isLoading } = useCar(id);
-  console.log(data);
   return (
     <>
     <Head>

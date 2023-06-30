@@ -11,9 +11,7 @@ export function useCar(id:string) {
     queryKey: ["product", id],
     staleTime: 1000 * 60 * 5,
   });
-  console.log(data)
   const carts = data?.data.find((car) => id  === car.id)
-  console.log(carts)
   return {
     data: carts,
     isLoading,

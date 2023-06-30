@@ -5,7 +5,6 @@ import { BodyType, Car } from "../@types/car";
 import { useFilter } from "./useFilter";
 export function useCars() {
   const { bodyType } = useFilter();
-  console.log(bodyType);
   const fetcher = async (): AxiosPromise<Car[]> => {
     return axios.get(API_URL);
   };
@@ -23,7 +22,6 @@ export function useCars() {
     return car.bodyType === bodyType;
   });
 
-  console.log(filteredCarts);
   return {
     data: filteredCarts,
     isLoading,
