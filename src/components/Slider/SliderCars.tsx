@@ -14,20 +14,27 @@ interface SliderProps {
 
 export function SliderCars({ filteredCar }: SliderProps) {
   const responsive = {
-    Desktop: {
-      breakpoint: { max: 3000, min: 1420 },
+    lgDesktop: {
+      breakpoint: { max: 3000, min: 1400},
       items: 4,
-      
     },
-    tablet: {
-      breakpoint: { max: 1424, min: 464 },
+    mdDesktop: {
+      breakpoint: { max: 1400, min: 1000 },
+      items: 3,
+    },
+    smDesktop: {
+      breakpoint: { max: 1000, min: 768 },
       items: 2,
     },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1.2,
-      partialVisibilityGutter: 40 , // this is needed to tell the amount of px that should be visible.
+    tablet: {
+      breakpoint: { max: 767, min: 470 },
+      items: 1.8,
     },
+    mobile: {
+      breakpoint: { max: 470, min: 0 },
+      items: 1.2,
+
+    }
   };
 
   return (
@@ -48,7 +55,6 @@ export function SliderCars({ filteredCar }: SliderProps) {
       renderButtonGroupOutside={true} 
       showDots
       customButtonGroup={<ButtonGroup />}
-      
       customDot={<CustomDot />}
       >
     

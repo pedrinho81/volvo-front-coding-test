@@ -1,5 +1,6 @@
 body {
-  padding: 0 1rem;
+  padding: 0;
+  margin: 0;
   background: white;
   color: black;
   min-height: 80vh;
@@ -29,7 +30,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 240px;
- 
+  height: 100%;
+  margin-right: 1rem;
+
   div:first-of-type{
     flex-direction: column;
     margin-bottom: 0.4rem;
@@ -80,7 +83,9 @@ body {
 }
 
 .carousel-container {
-  min-height: 350px
+  min-height: 400px;
+  width: 95%;
+  margin: 0 auto;
 }
 .carousel-button-group {
   display: none;
@@ -92,7 +97,7 @@ body {
   .disable {
     opacity: .7;
   }
-  @media(min-width: 768px) {
+  @media(min-width: 1000px) {
     display: flex;
   }
   
@@ -110,14 +115,7 @@ body {
 .inverted {
     transform: rotate(180deg);
 }
-.react-multi-carousel-item{
-  max-width: 400px;
-  min-width: 280px;
-  @media(min-width: 768px) { 
-    max-width: 360px;
-    min-width: 320px;
-  }
-}
+
 
 .custom-dot-list-style {
   button {
@@ -132,7 +130,7 @@ body {
   .active {
     background: black;
   }
-  @media(min-width: 768px) {
+  @media(min-width: 1000px) {
     display: none !important;
   }
 }
@@ -142,7 +140,6 @@ body {
   @extend .btn;
   margin-right: auto;
 }
-//TODO: MELHORAR RESPONSIVIDADE MOBILE E TABLET (ÚLTIMO ITEM)
 //TODO: ADICIONAR EFEITO HOVER NO .BTN
 //TODO: ADICIONAR FILTER BY BODYTYPE
 //TODO: ADICIONAR TESTES 
