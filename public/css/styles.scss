@@ -96,6 +96,10 @@ body {
 
   .disable {
     opacity: .7;
+    :hover {
+      border: none !important;
+      border-radius: 50%;
+    }
   }
   @media(min-width: 1000px) {
     display: flex;
@@ -108,10 +112,11 @@ body {
   background: none;
   border: none;
   :hover {
-    border: 1px solid #3A70B6;
+    border-right: 1px solid #3A70B6;
     border-radius: 50%;
   }
 }
+
 .inverted {
     transform: rotate(180deg);
 }
@@ -140,6 +145,6 @@ body {
   @extend .btn;
   margin-right: auto;
 }
-//TODO: ADICIONAR EFEITO HOVER NO .BTN
+//TODO: REMOVER HOVER QUANDO BTN ESTIVER DISABLE
 //TODO: ADICIONAR FILTER BY BODYTYPE
 //TODO: ADICIONAR TESTES 
