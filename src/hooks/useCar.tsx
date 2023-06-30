@@ -1,7 +1,7 @@
 import axios, { AxiosPromise } from "axios";
 import { useQuery } from "react-query";
 import { API_URL } from "../constants";
-import { Car } from "../types/car";
+import { Car } from "../@types/car";
 export function useCar(id:string) {
   const fetcher = async (): AxiosPromise<Car[]> => {
     return axios.get(`${API_URL}/`);

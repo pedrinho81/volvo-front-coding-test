@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { StyleProvider, ThemePicker } from "vcc-ui";
+import { FilterContextProvider } from "../contexts/FilterContext";
 
 interface DefaultProvidersProps {
   children: ReactNode;
@@ -13,9 +14,13 @@ export function DefaultProviders({ children }: DefaultProvidersProps) {
     <>
       <QueryClientProvider client={client}>
         <StyleProvider>
-          <ThemePicker variant="light">{children}</ThemePicker>
+          <FilterContextProvider>
+            <ThemePicker variant="light">
+              {children}
+            </ThemePicker>
+          </FilterContextProvider>
         </StyleProvider>
-      </QueryClientProvider> 
+      </QueryClientProvider>
     </>
   );
 }

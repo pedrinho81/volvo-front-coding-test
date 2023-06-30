@@ -1,8 +1,11 @@
 import axios, { AxiosPromise } from "axios";
 import { useQuery } from "react-query";
 import { API_URL } from "../constants";
-import { Car } from "../types/car";
+import { BodyType, Car } from "../@types/car";
+import { useFilter } from "./useFilter";
 export function useCars() {
+  const { bodyType } = useFilter();
+  console.log(bodyType);
   const fetcher = async (): AxiosPromise<Car[]> => {
     return axios.get(API_URL);
   };
@@ -11,11 +14,18 @@ export function useCars() {
     queryKey: ["products"],
     staleTime: 1000 * 60 * 5,
   });
-  console.log(data)
-  const carts = data?.data
-  console.log(carts)
+  let Allcars = data?.data;
+
+  let filteredCarts = Allcars?.filter((car) => {
+    if(bodyType === BodyType.ALL) {
+      return Allcars
+    }
+    return car.bodyType === bodyType;
+  });
+
+  console.log(filteredCarts);
   return {
-    data: carts,
+    data: filteredCarts,
     isLoading,
   };
 }
