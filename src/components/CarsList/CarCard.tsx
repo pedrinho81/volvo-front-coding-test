@@ -1,12 +1,12 @@
 import { Flex, Text } from "vcc-ui";
 import React from "react";
 import Image from "next/image";
-import { Car } from "../../types/car";
+import { Car } from "../../@types/car";
 import { ChevronCircled } from "../../../docs/ChevronCircledIcon";
 import { ChevronSmall } from "../../../docs/chevron-small";
 import Link from "next/link";
 import { useNavigateByTab } from "../../utils/navigateByTab";
-import { Card } from "../../types/card";
+import { Card } from "../../@types/card";
 export function CarCard({ bodyType, id, imageUrl, modelName, modelType, noCta }: Card) {
   const {handleNavigateByTab} = useNavigateByTab()
   return (

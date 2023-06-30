@@ -1,11 +1,8 @@
-import { useRef } from "react";
-import { Car } from "../../types/car";
+import { Car } from "../../@types/car";
 import { CarCard } from "../CarsList/CarCard";
-import { Text } from "vcc-ui";
 import {ButtonGroup} from './ButtonGroup'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { ChevronCircled } from "../../../docs/ChevronCircledIcon";
 import { CustomDot } from "./Dots";
 
 interface SliderProps {
