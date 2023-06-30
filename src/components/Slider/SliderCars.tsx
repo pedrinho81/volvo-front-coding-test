@@ -18,7 +18,7 @@ export function SliderCars({ filteredCar }: SliderProps) {
     },
     mdDesktop: {
       breakpoint: { max: 1400, min: 1000 },
-      items: filteredCar.length < 4 ? filteredCar.length : 2,
+      items: filteredCar.length < 4 ? filteredCar.length : 2.8,
     },
     smDesktop: {
       breakpoint: { max: 1000, min: 768 },
@@ -34,9 +34,8 @@ export function SliderCars({ filteredCar }: SliderProps) {
 
     }
   };
-  console.log('TOTAL: ')
-  console.log(filteredCar.length)
-  return (
+
+    return (
     <>
     <Carousel
       swipeable={true}

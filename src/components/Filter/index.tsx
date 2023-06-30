@@ -1,17 +1,24 @@
 import { useState } from "react";
 import { BodyType } from "../../@types/car";
 import { useFilter } from "../../hooks/useFilter";
+import { Block, SelectInput } from "vcc-ui";
+
 export function Filter() {
-  const [isOpen, setIsOpen] = useState(false);
-  const {setBodyType} = useFilter()
+  const { setBodyType, bodyType } = useFilter();
   return (
-    <>
-    <select defaultValue={BodyType.ALL}>
-    <option onClick={() =>  setBodyType(BodyType.ALL)}>{BodyType.ALL}</option>
-    <option onClick={() =>  setBodyType(BodyType.ESTATE)}>{BodyType.ESTATE}</option>
-    <option onClick={() =>  setBodyType(BodyType.SEDAN)}>{BodyType.SEDAN}</option>
-    <option onClick={() =>  setBodyType(BodyType.SUV)}>{BodyType.SUV}</option>
-    </select>
-    </>
-  )
+    <Block extend={{maxWidth: '300px', margin: '1rem auto 0 auto'}}>
+      <SelectInput
+    label={'Body Type'}
+    value={bodyType}
+    onChange={(e) => setBodyType(e.target.value as BodyType)}
+  >
+    <option value={BodyType.ALL}>Todos</option>
+    <option value={BodyType.SEDAN}>Sedan</option>
+    <option value={BodyType.ESTATE}>Estate</option>
+    <option value={BodyType.SUV}>SUV</option>
+  </SelectInput>
+    </Block>
+    
+
+  );
 }

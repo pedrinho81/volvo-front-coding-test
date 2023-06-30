@@ -89,10 +89,7 @@ body {
 }
 .carousel-button-group {
   display: none;
-  position: absolute;
-  align-items: center;
-  margin-top: 2rem;
-  right: 100px;
+  
 
   .disable {
     opacity: .7;
@@ -102,6 +99,12 @@ body {
     }
   }
   @media(min-width: 1000px) {
+  margin: 0 auto;
+  max-width: 5rem;
+  display: block;
+  align-items: center;
+  margin-top: 2rem;
+  right: 100px;
     display: flex;
   }
   
