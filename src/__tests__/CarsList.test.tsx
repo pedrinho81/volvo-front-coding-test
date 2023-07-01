@@ -31,6 +31,7 @@ describe("UseCars Hook", () => {
     const {getByTestId, queryByTestId} = render(<CarsList />, { wrapper });
     const carousel = getByTestId('carousel-section')
     const loadingIcon = queryByTestId("rotating-lines-svg")
+    
     expect(carousel).toBeInTheDocument();
     expect(loadingIcon).not.toBeInTheDocument()
   });
@@ -41,6 +42,7 @@ describe("UseCars Hook", () => {
     }));
     const {getByTestId, debug} = render(<CarsList />, { wrapper });
     const loadingIcon = getByTestId("rotating-lines-svg")
+
     expect(loadingIcon).toBeInTheDocument();
   });
   it("should render error message when data not exist data", () => {
@@ -50,7 +52,7 @@ describe("UseCars Hook", () => {
     }));
     const {getByText, debug} = render(<CarsList />, { wrapper });
     const erroMessage = getByText("Não há carros disponíveis no momento...")
-    debug()
+
     expect(erroMessage).toBeInTheDocument();
   });
 });
