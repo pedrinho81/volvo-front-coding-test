@@ -146,6 +146,10 @@ body {
 .back-btn {
   @extend .inverted;
   @extend .btn;
-  margin-right: auto;
+  height: auto;
+  margin-left: 2rem;
+  @media(min-width: 900px) {
+    margin-left: 5.5rem;
+  }
 }
 

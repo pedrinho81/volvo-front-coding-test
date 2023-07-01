@@ -13,16 +13,24 @@ export default function HomePage() {
   const { data, isLoading } = useCar(id);
   return (
     <>
-    <Head>
+      <Head>
         <title>Challenge Front | Shop</title>
       </Head>
       {isLoading && <Spinner />}
       {data && (
         <>
-          <Text className="title-page">
+          <Flex
+            extend={{
+              flexDirection: "row",
+              maxWidth: "1000px",
+              margin: "0 auto",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
             <BackBtn navigate="/" />
-            Shop
-          </Text>
+            <Text extend={{flex: 1}} className="title-page">Shop</Text>
+          </Flex>
 
           <Flex
             extend={{
@@ -31,7 +39,7 @@ export default function HomePage() {
               maxWidth: "1000px",
               flexWrap: "wrap",
               margin: "0 auto",
-              gap: "1.5rem",
+              gap: "2.5rem",
               justifyContent: "center",
             }}
           >
