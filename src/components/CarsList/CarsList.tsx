@@ -1,7 +1,7 @@
 import { Spinner } from "vcc-ui";
 import { RotatingLines } from "react-loader-spinner";
 import { useCars } from "../../hooks/useCars";
-import { SliderCars } from "../Slider/SliderCars";
+import { SliderCars } from "../Carousel/CarouselCars";
 import { mockCars } from "../../mocks/cars";
 export function CarsList() {
   const { data, isLoading } = useCars();
