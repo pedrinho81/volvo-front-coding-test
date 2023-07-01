@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Button } from "vcc-ui";
+import { useNavigateByTab } from "../../utils/navigateByTab";
 import { ChevronCircled } from "../../../docs/ChevronCircledIcon";
 interface BackBtnProps {
   navigate: string;
@@ -10,8 +10,16 @@ export function BackBtn({ navigate }: BackBtnProps) {
   const handleNavigate = () => {
     router.push(navigate);
   };
+  const {handleNavigateByTab} = useNavigateByTab()
+
   return (
-    <div role="button" className="back-btn" tabIndex={1} onClick={handleNavigate}>
+    <div
+      role="button"
+      onKeyDown={(e) => handleNavigateByTab(e, `/`)}
+      className="back-btn"
+      tabIndex={1}
+      onClick={handleNavigate}
+    >
       <ChevronCircled />
     </div>
   );
