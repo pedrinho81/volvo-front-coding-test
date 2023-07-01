@@ -5,11 +5,11 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { CustomDot } from "./Dots";
 
-interface SliderProps {
+interface CarouselProps {
   filteredCar: Car[];
 }
 
-export function SliderCars({ filteredCar }: SliderProps) {
+export function CarouselCars({ filteredCar }: CarouselProps) {
   const responsive = {
     lgDesktop: {
       breakpoint: { max: 3000, min: 1400 },
