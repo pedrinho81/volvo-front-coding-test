@@ -3,11 +3,13 @@ import { renderHook } from "@testing-library/react-hooks";
 import { FilterContextProvider } from "../contexts/FilterContext";
 import { useFilter } from "../hooks/useFilter";
 import { act } from "react-dom/test-utils";
-import { BodyType } from "../@types/car";
+import { BodyType, Car } from "../@types/car";
 
 const wrapper = ({ children }: any) => (
   <FilterContextProvider>{children}</FilterContextProvider>
 );
+
+
 describe("Filter", () => {
   it("should render all by default", () => {
     const { result } = renderHook(() => useFilter(), { wrapper });
