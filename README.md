@@ -1,7 +1,7 @@
 # Volvo Cars (Global Online Digital)
 
 ## Front-end coding test (React)
-
+Deployed in: <a href='https://thiagorodrigo.netlify.app/' target="_blank">thiagorodrigo.netlify.app</a>
 ## Requirements
 
 - [X] The project is bootstraped using [Next.js](https://nextjs.org/).
